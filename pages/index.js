@@ -15,6 +15,7 @@ function Home() {
 
   // TODO: create a function that makes the API call to get all the books
   const getAllTheBooks = () => {
+    console.warn(user);
     getBooks(user.uid).then(setBooks);
   };
 
