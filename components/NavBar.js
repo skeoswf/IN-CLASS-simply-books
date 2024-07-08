@@ -3,9 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import {
-  Navbar, Container, Nav,
-} from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 export default function NavBar() {
   return (
@@ -23,6 +21,15 @@ export default function NavBar() {
             </Link>
             <Link passHref href="/book/new">
               <Nav.Link>Create Book</Nav.Link>
+            </Link>
+            <Link passHref href="/pages/authors.js">
+              <Nav.Link>Authors</Nav.Link>
+            </Link>
+            <Link passHref href="/pages/author/new.js">
+              <Nav.Link>Create Author</Nav.Link>
+            </Link>
+            <Link passHref href="/pages/book/profile.js">
+              <Nav.Link>Profile</Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
