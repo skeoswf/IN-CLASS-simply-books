@@ -111,7 +111,9 @@ function BookForm({ obj }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Book</Button>
+      <Button type="submit" onClick={() => console.warn(authors)}>
+        {obj.firebaseKey ? 'Update' : 'Create'} Book
+      </Button>
     </Form>
   );
 }
