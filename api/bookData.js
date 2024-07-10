@@ -4,15 +4,16 @@ import { clientCredentials } from '../utils/client';
 const endpoint = clientCredentials.databaseURL;
 
 // prettier-ignore
-const getBooks = (uid) => new Promise((resolve, reject) => {fetch(`${endpoint}/books.json?orderBy="uid"&equalTo="${uid}"`, {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-})
-  .then((response) => response.json())
-  .then((data) => resolve(Object.values(data)))
-  .catch(reject);
+const getBooks = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/books.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
 });
 
 // prettier-ignore
