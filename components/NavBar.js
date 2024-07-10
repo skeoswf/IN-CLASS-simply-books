@@ -22,10 +22,10 @@ export default function NavBar() {
             <Link passHref href="/book/new">
               <Nav.Link>Create Book</Nav.Link>
             </Link>
-            <Link passHref href="/pages/authors.js">
+            <Link passHref href="/authors">
               <Nav.Link>Authors</Nav.Link>
             </Link>
-            <Link passHref href="/pages/author/new.js">
+            <Link passHref href="/pages/authors.js">
               <Nav.Link>Create Author</Nav.Link>
             </Link>
             <Link passHref href="/pages/book/profile.js">
