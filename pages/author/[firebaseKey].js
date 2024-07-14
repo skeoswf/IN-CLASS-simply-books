@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { viewAuthorDetails } from '../../api/mergedData';
 import BookCard from '../../components/BookCard';
+import AuthorCard from '../../components/AuthorCard';
 
 export default function ViewAuthor() {
   const [authorDetails, setAuthorDetails] = useState({});
@@ -20,6 +21,7 @@ export default function ViewAuthor() {
           <BookCard key={authorBooksArray.firebaseKey} bookObj={authorBooksArray} />
         ))}
         {console.warn(authorDetails)}
+        <AuthorCard key={authorDetails.firebaseKey} authorObj={authorDetails} style={{ height: '200px' }} />
       </div>
     </div>
   );
